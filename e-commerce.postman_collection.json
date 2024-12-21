@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "f9b10b15-6b58-42e2-94c1-93e2a8bd9403",
+		"name": "MERN-e-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26854764"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"jalal\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get cart",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbEBnbWFpbC5jb20iLCJpYXQiOjE3MjY4ODkyMzh9.n3yrfE8vgTF7ceqYRdZw_1Kzz_oMAnPzQWsjFfmPXWg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n\n    \"productId\":\"66eb9cd06bd57613cf82acf1\",\n    \n    \"quantity\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cart/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update item in cart",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbEBnbWFpbC5jb20iLCJpYXQiOjE3MjcwNjUxMTd9.zB-lxGK4L-vUx5zrbELnlr4dLzDUisJYXFQLn1X3bUY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"_id\":{\"productId\": \"66eb9cd06bd57613cf82acf6\"},\n\n  \"quantity\": 1\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cart/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove item from cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbEBnbWFpbC5jb20iLCJpYXQiOjE3MjcxNTAyMDJ9.NJRsCmrrxevJ3DI84tuwiTZagWibf95RttGrMQAJ7yo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/cart/items/66eb9cd06bd57613cf82acf1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"items",
+						"66eb9cd06bd57613cf82acf1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clear cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbEBnbWFpbC5jb20iLCJpYXQiOjE3MjcyMzY3MjF9.X3V8YJxNgbCLnQD7zPc5sCDop8fn5SfXoAkxdBeNPMI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbDExMUBnbWFpbC5jb20iLCJpYXQiOjE3Mjc5Mjc5NTN9.kzQiTPtbdDjBTJZQW4K74y0UlLNDkQeYafI_Xr11JOM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/cart/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cart",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbEBnbWFpbC5jb20iLCJpYXQiOjE3MzAzNDIzNDR9.uvAjIwcQo-AdYSW0xM4yNvxap1ASuF9QMJuJSCq6z84",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "SessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJKYWxhbCIsImxhc3ROYW1lIjoiQWxqaG55IiwiZW1haWwiOiJqYWxhbEBnbWFpbC5jb20iLCJpYXQiOjE3MzA0MzQ2MTR9.inC71VK9ttEWOjSR-y2joQGoDapkl7vyReYAkQgv0ak",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/signout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"jalal@gmail.com\",\n    \"firstName\":\"JALAL\",\n    \"lastName\":\"ALJHNY\",\n    \"address\":\"jableh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/change",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"change"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"oldPassword\":\"Jalal123!#\",\n    \"newPassword\":\"Jalal123!@#\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/change-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"jalal7aljhny9@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newpassword\":\"12345678\",\n    \"confirmNewPassword\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/reset-password?token=05e10175-a3ee-4ec4-96e0-c63dc1bc8675",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"reset-password"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "05e10175-a3ee-4ec4-96e0-c63dc1bc8675"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/66fe16915dbc792d61cdedcf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"66fe16915dbc792d61cdedcf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user role",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newRole\":\"User\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/user/6725a723047b996bcc21170f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"user",
+						"6725a723047b996bcc21170f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/product/66eb9cd06bd57613cf82acf1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"product",
+						"66eb9cd06bd57613cf82acf1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/search?name=test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-session",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/jalalaljhny/Pictures/DSC_0444.JPG"
+						},
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "path",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "10.0",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
